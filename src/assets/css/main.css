@@ -1,0 +1,182 @@
+
+@font-face {
+  font-family: "Rajdhani-Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/rajdhani/rajdhani-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rajdhani/rajdhani-light-webfont.woff") format("woff"), url("../fonts/rajdhani/rajdhani-light-webfont.ttf") format("truetype"), url("../fonts/rajdhani/rajdhani-light-webfont.svg#Rajdhani-Light") format("svg"); }
+
+@font-face {
+  font-family: "Rajdhani-Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/rajdhani/rajdhani-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rajdhani/rajdhani-medium-webfont.woff") format("woff"), url("../fonts/rajdhani/rajdhani-medium-webfont.ttf") format("truetype"), url("../fonts/rajdhani/rajdhani-medium-webfont.svg#Rajdhani-Medium") format("svg"); }
+
+@font-face {
+  font-family: "Rajdhani-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/rajdhani/rajdhani-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rajdhani/rajdhani-regular-webfont.woff") format("woff"), url("../fonts/rajdhani/rajdhani-regular-webfont.ttf") format("truetype"), url("../fonts/rajdhani/rajdhani-regular-webfont.svg#Rajdhani-Regular") format("svg"); }
+
+@font-face {
+  font-family: "Rajdhani-Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/rajdhani/rajdhani-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rajdhani/rajdhani-semibold-webfont.woff") format("woff"), url("../fonts/rajdhani/rajdhani-semibold-webfont.ttf") format("truetype"), url("../fonts/rajdhani/rajdhani-semibold-webfont.svg#Rajdhani-Semibold") format("svg"); }
+
+@font-face {
+  font-family: "Rajdhani-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/rajdhani/rajdhani-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/rajdhani/rajdhani-bold-webfont.woff") format("woff"), url("../fonts/rajdhani/rajdhani-bold-webfont.ttf") format("truetype"), url("../fonts/rajdhani/rajdhani-bold-webfont.svg#Rajdhani-Bold") format("svg"); }
+
+html,
+body,
+canvas {
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-family: 'Rajdhani-Regular', sans-serif;
+  background: black;
+  color: #f9f9f9;
+  letter-spacing: 0.02rem;
+  position: relative;
+  -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rajdhani-Medium', sans-serif; }
+
+.button {
+  font-family: 'Rajdhani-Semibold', sans-serif; }
+
+.header {
+  height: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(20, 20, 20, 0.4); }
+
+.menu,
+.moons {
+  position: fixed;
+  top: 0;
+  background: rgba(25, 25, 25, 0.15);
+  z-index: 3;
+  border: 1px solid rgba(45, 45, 45, 0.85); }
+  .menu ul,
+  .moons ul {
+    list-style: none;
+    margin-bottom: 0; }
+  .menu li,
+  .moons li {
+    line-height: 2rem; }
+
+.menu {
+  left: 0;
+  width: 250px; }
+  .menu li {
+    font-size: 0.925rem; }
+  .menu table {
+    font-family: 'Rajdhani-Semibold', sans-serif;
+    margin-bottom: 0;
+    color: white;
+    font-size: 0.825rem;
+    line-height: normal; }
+    .menu table sup {
+      font-size: 50%; }
+  .menu a {
+    color: #cccccc; }
+    .menu a:hover {
+      color: #ffbd00; }
+
+.moons {
+  right: 0;
+  width: 250px; }
+  .moons .accordion-title {
+    font-family: 'Rajdhani-Semibold', sans-serif;
+    font-size: 0.8125rem; }
+  .moons table {
+    font-family: 'Rajdhani-Semibold', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-bottom: 0; }
+  .moons.traveling .moon-list {
+    opacity: 0; }
+  .moons .moon-list {
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+    max-height: 85vh;
+    overflow: hidden;
+    overflow-y: scroll; }
+  .moons a:hover {
+    color: #3beaf7; }
+
+.planet-name {
+  font-family: 'Rajdhani-Semibold', sans-serif;
+  font-size: 1.125rem; }
+
+
+.menu-title {
+  font-family: 'Rajdhani-Bold', sans-serif;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(45, 45, 45, 0.8);
+  padding: 0.5rem 1rem; }
+
+
+.button.render-scene {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.4125rem; }
+
+.scene {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50;
+  right: 0;
+  width: 100%;
+  z-index: 0; }
+
+@keyframes progressBar {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
+
+.loading-prompt {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+  margin: 2rem auto; }
+  .loading-prompt.active {
+    opacity: 1; }
+
+.progress {
+  transition: opacity 450ms ease-out;
+  margin-top: 1rem;
+  opacity: 1; }
+  .progress .progress-meter {
+    transition: width 425ms ease-in-out; }
+  .progress.active {
+    opacity: 1; }
+    .progress.active .progress-meter {
+      animation: progressBar 2000ms ease-out; }
+  .progress.complete {
+    opacity: 1; }
+    .progress.complete .progress-meter {
+      width: 100%; }
+
+.tutorial-modal {
+  color: black; }
+  .tutorial-modal .button {
+    display: block;
+    max-width: 180px;
+    margin: 0 auto; }
+
+
+.project-info {
+  margin-bottom: 1.5rem; }
