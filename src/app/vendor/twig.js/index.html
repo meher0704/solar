@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>solar-system-threejs | The Solar System modeled to scale with Three.js</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="solar-system-threejs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Solar System modeled to scale with Three.js" />
+<meta property="og:description" content="The Solar System modeled to scale with Three.js" />
+<link rel="canonical" href="https://meherkhurana.github.io/solar-system-threejs/src/app/vendor/twig.js/" />
+<meta property="og:url" content="https://meherkhurana.github.io/solar-system-threejs/src/app/vendor/twig.js/" />
+<meta property="og:site_name" content="solar-system-threejs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="solar-system-threejs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The Solar System modeled to scale with Three.js","headline":"solar-system-threejs","url":"https://meherkhurana.github.io/solar-system-threejs/src/app/vendor/twig.js/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/solar-system-threejs/assets/css/style.css?v=130ee4a9e32ec956430e2a40460efa2b2b5f226d">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/solar-system-threejs/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://meherkhurana.github.io/solar-system-threejs/">solar-system-threejs</a></h1>
+      
+
+      <p><a href="http://travis-ci.org/#!/justjohn/twig.js"><img src="https://secure.travis-ci.org/justjohn/twig.js.svg" alt="Build Status" /></a>
+<a href="http://badge.fury.io/js/twig"><img src="https://badge.fury.io/js/twig.svg" alt="NPM version" /></a></p>
+
+<h1 id="about">About</h1>
+
+<p>Twig.js is a pure JavaScript implementation of the Twig PHP templating language
+(<a href="http://twig.sensiolabs.org/">http://twig.sensiolabs.org/</a>)</p>
+
+<p>The goal is to provide a library that is compatible with both browsers and server side JavaScript environments such as node.js.</p>
+
+<p>Twig.js is currently a work in progress and supports a limited subset of the Twig templating language (with more coming).</p>
+
+<h3 id="docs">Docs</h3>
+
+<p>Documentation is available in the <a href="https://github.com/justjohn/twig.js/wiki">twig.js wiki</a> on Github.</p>
+
+<h3 id="feature-support">Feature Support</h3>
+
+<p>For a list of supported tags/filters/functions/tests see the <a href="https://github.com/justjohn/twig.js/wiki/Implementation-Notes">Implementation Notes</a> page on the wiki.</p>
+
+<h1 id="releases">Releases</h1>
+
+<p>Download the latest twig.js release from github: https://github.com/justjohn/twig.js/releases</p>
+
+<h2 id="browser-usage-bower">Browser Usage (bower)</h2>
+
+<p>Twig.js can be installed as a bower package with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bower install twig.js
+</code></pre></div></div>
+
+<p>Include twig.js or twig.min.js in your page, then:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="nx">twig</span><span class="p">({</span>
+    <span class="na">data</span><span class="p">:</span> <span class="dl">'</span><span class="s1">The  is a lie.</span><span class="dl">'</span>
+<span class="p">});</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+    <span class="nx">template</span><span class="p">.</span><span class="nx">render</span><span class="p">({</span><span class="na">baked_good</span><span class="p">:</span> <span class="dl">'</span><span class="s1">cupcake</span><span class="dl">'</span><span class="p">})</span>
+<span class="p">);</span>
+<span class="c1">// outputs: "The cupcake is a lie."</span>
+</code></pre></div></div>
+
+<h2 id="node-usage-npm">Node Usage (npm)</h2>
+
+<p>Twig.js can be installed with NPM</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install twig
+</code></pre></div></div>
+
+<p>You can use twig in your app with</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var Twig = require('twig'), // Twig module
+    twig = Twig.twig;       // Render function
+</code></pre></div></div>
+
+<p>Twig is compatable with express 2 and 3. You can create an express app using the twig.js templating language by setting the view engine to twig.</p>
+
+<h2 id="appjs">app.js</h2>
+
+<p><strong>Express 3</strong></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Twig</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">twig</span><span class="dl">"</span><span class="p">),</span>
+    <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">),</span>
+    <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+
+<span class="c1">// This section is optional and used to configure twig.</span>
+<span class="nx">app</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">"</span><span class="s2">twig options</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">strict_variables</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="dl">'</span><span class="s1">index.twig</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">message</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">Hello World</span><span class="dl">"</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">9999</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="viewsindextwig">views/index.twig</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Message of the moment: <span class="nt">&lt;b&gt;&lt;/b&gt;</span>
+</code></pre></div></div>
+
+<p>An <a href="https://github.com/justjohn/twig.js/wiki/Express-2">Express 2 Example</a> is available on the wiki.</p>
+
+<h1 id="contributing">Contributing</h1>
+
+<p>If you have a change you want to make to twig.js, feel free to fork this repository and submit a pull request on Github. The source files are located in src/*.js. twig.js is built by running <code class="language-plaintext highlighter-rouge">make</code></p>
+
+<p>For more details on getting setup, see the <a href="https://github.com/justjohn/twig.js/wiki/Contributing">contributing page</a> on the wiki.</p>
+
+<h2 id="tests">Tests</h2>
+
+<p>The twig.js tests are written in <a href="http://visionmedia.github.com/mocha/">Mocha</a> and can be invoked with <code class="language-plaintext highlighter-rouge">make test</code>.</p>
+
+<h2 id="license">License</h2>
+
+<p>Twig.js is available under a <a href="http://www.opensource.org/licenses/BSD-2-Clause">BSD 2-Clause License</a>, see the LICENSE file for more information.</p>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+
+<p>See the LICENSES.md file for copies of the referenced licenses.</p>
+
+<ol>
+  <li>
+    <p>The JavaScript Array fills in src/twig.fills.js are from <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a> and are available under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a> or are <a href="https://developer.mozilla.org/Project:Copyrights">public domain</a>.</p>
+  </li>
+  <li>
+    <p>The Date.format function in src/twig.lib.js is from <a href="http://jpaq.org/">http://jpaq.org/</a> and used under a <a href="http://jpaq.org/license/">MIT license</a>.</p>
+  </li>
+  <li>
+    <p>The sprintf implementation in src/twig.lib.js used for the format filter is from <a href="http://www.diveintojavascript.com/projects/javascript-sprintf">http://www.diveintojavascript.com/projects/javascript-sprintf</a> and used under a <a href="http://www.opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a>.</p>
+  </li>
+  <li>
+    <p>The strip_tags implementation in src/twig.lib.js used for the striptags filter is from <a href="http://phpjs.org/functions/strip_tags">http://phpjs.org/functions/strip_tags</a> and used under and <a href="http://phpjs.org/pages/license/#MIT">MIT License</a>.</p>
+  </li>
+</ol>
+
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/MeherKhurana/solar-system-threejs/edit/gh-pages/src/app/vendor/twig.js/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

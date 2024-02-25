@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Random Color | solar-system-threejs</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Random Color" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Solar System modeled to scale with Three.js" />
+<meta property="og:description" content="The Solar System modeled to scale with Three.js" />
+<link rel="canonical" href="https://meherkhurana.github.io/solar-system-threejs/src/app/vendor/randomcolor/" />
+<meta property="og:url" content="https://meherkhurana.github.io/solar-system-threejs/src/app/vendor/randomcolor/" />
+<meta property="og:site_name" content="solar-system-threejs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Random Color" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The Solar System modeled to scale with Three.js","headline":"Random Color","url":"https://meherkhurana.github.io/solar-system-threejs/src/app/vendor/randomcolor/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/solar-system-threejs/assets/css/style.css?v=130ee4a9e32ec956430e2a40460efa2b2b5f226d">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/solar-system-threejs/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://meherkhurana.github.io/solar-system-threejs/">solar-system-threejs</a></h1>
+      
+
+      <h1 id="random-color"><a href="http://llllll.li/randomColor">Random Color</a></h1>
+
+<p>A tiny script for generating attractive random colors. See the results on <a href="http://llllll.li/randomColor/">the demo</a>.</p>
+
+<p><a href="http://llllll.li/randomColor"><img src="http://i.imgur.com/lOLCqvu.gif" alt="Demo" /></a></p>
+
+<p>randomColor is available <a href="http://cdnjs.com/libraries/randomcolor">minified on cdnjs</a>. It is also distributed on <a href="https://www.npmjs.org/package/randomcolor">npm</a> and bower.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">randomcolor</span>
+</code></pre></div></div>
+<p>randomColor has been ported to <a href="https://github.com/nathanpjones/randomColorSharped">C#</a>, <a href="https://github.com/hansrodtang/randomcolor">Go</a>, <a href="https://github.com/mistic100/RandomColor.php">PHP</a>, <a href="https://github.com/kevinwuhoo/randomcolor-py">Python</a>, <a href="https://github.com/onevcat/RandomColorSwift">Swift</a>, <a href="https://github.com/yageek/randomColor">Objective-C</a> and <a href="https://github.com/lzyzsd/AndroidRandomColor">Java</a>.</p>
+
+<h3 id="options">Options</h3>
+
+<p>You can pass an options object to influence the type of color it produces. The options object accepts the following properties:</p>
+
+<p><strong>Hue</strong> – Controls the hue of the generated color. You can pass a string representing a color name: <code class="language-plaintext highlighter-rouge">red</code>, <code class="language-plaintext highlighter-rouge">orange</code>, <code class="language-plaintext highlighter-rouge">yellow</code>, <code class="language-plaintext highlighter-rouge">green</code>, <code class="language-plaintext highlighter-rouge">blue</code>, <code class="language-plaintext highlighter-rouge">purple</code>, <code class="language-plaintext highlighter-rouge">pink</code> and <code class="language-plaintext highlighter-rouge">monochrome</code> are currently supported.</p>
+
+<p><strong>Luminosity</strong> – Controls the luminosity of the generated color. You can specify a string containing <code class="language-plaintext highlighter-rouge">bright</code>, <code class="language-plaintext highlighter-rouge">light</code> or <code class="language-plaintext highlighter-rouge">dark</code>.</p>
+
+<p><strong>Count</strong> – An integer which specifies the number of colors to generate.</p>
+
+<p><strong>Seed</strong> - An integer or string which when passed will cause randomColor to return the same color each time.</p>
+
+<p><strong>Format</strong> – A string which specifies the format of the generated color. Possible values are <code class="language-plaintext highlighter-rouge">rgb</code>, <code class="language-plaintext highlighter-rouge">rgbArray</code>, <code class="language-plaintext highlighter-rouge">hsl</code>, <code class="language-plaintext highlighter-rouge">hslArray</code> and <code class="language-plaintext highlighter-rouge">hex</code> (default).</p>
+
+<h3 id="examples">Examples</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// Returns a hex code for an attractive color</span>
+<span class="nx">randomColor</span><span class="p">();</span> 
+
+<span class="c1">// Returns an array of ten green colors</span>
+<span class="nx">randomColor</span><span class="p">({</span>
+   <span class="na">count</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+   <span class="na">hue</span><span class="p">:</span> <span class="dl">'</span><span class="s1">green</span><span class="dl">'</span>
+<span class="p">});</span>
+
+<span class="c1">// Returns a hex code for a light blue</span>
+<span class="nx">randomColor</span><span class="p">({</span>
+   <span class="na">luminosity</span><span class="p">:</span> <span class="dl">'</span><span class="s1">light</span><span class="dl">'</span><span class="p">,</span>
+   <span class="na">hue</span><span class="p">:</span> <span class="dl">'</span><span class="s1">blue</span><span class="dl">'</span>
+<span class="p">});</span>
+
+<span class="c1">// Returns a hex code for a 'truly random' color</span>
+<span class="nx">randomColor</span><span class="p">({</span>
+   <span class="na">luminosity</span><span class="p">:</span> <span class="dl">'</span><span class="s1">random</span><span class="dl">'</span><span class="p">,</span>
+   <span class="na">hue</span><span class="p">:</span> <span class="dl">'</span><span class="s1">random</span><span class="dl">'</span>
+<span class="p">});</span>
+
+<span class="c1">// Returns a bright color in RGB</span>
+<span class="nx">randomColor</span><span class="p">({</span>
+   <span class="na">luminosity</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bright</span><span class="dl">'</span><span class="p">,</span>
+   <span class="na">format</span><span class="p">:</span> <span class="dl">'</span><span class="s1">rgb</span><span class="dl">'</span> <span class="c1">// e.g. 'rgb(225,200,20)'</span>
+<span class="p">});</span>
+
+<span class="c1">// Returns a dark RGB color with random alpha</span>
+<span class="nx">randomColor</span><span class="p">({</span>
+   <span class="na">luminosity</span><span class="p">:</span> <span class="dl">'</span><span class="s1">dark</span><span class="dl">'</span><span class="p">,</span>
+   <span class="na">format</span><span class="p">:</span> <span class="dl">'</span><span class="s1">rgba</span><span class="dl">'</span> <span class="c1">// e.g. 'rgba(9, 1, 107, 0.6482447960879654)'</span>
+<span class="p">});</span>
+
+<span class="c1">// Returns a light HSL color with random alpha</span>
+<span class="nx">randomColor</span><span class="p">({</span>
+   <span class="na">luminosity</span><span class="p">:</span> <span class="dl">'</span><span class="s1">light</span><span class="dl">'</span><span class="p">,</span>
+   <span class="na">format</span><span class="p">:</span> <span class="dl">'</span><span class="s1">hsla</span><span class="dl">'</span> <span class="c1">// e.g. 'hsla(27, 88.99%, 81.83%, 0.6450211517512798)'</span>
+<span class="p">});</span>
+
+</code></pre></div></div>
+
+<h3 id="license">License</h3>
+
+<p>This project is dedicated to the public domain.</p>
+
+<h3 id="to-do">To do</h3>
+
+<p><em>More generally, it might be a good idea to consider using other color models.</em></p>
+
+<ol>
+  <li>When returning an array of multiple colors, try to make each color as distinct as possible. Make sure each color is distinct to its neighbours.</li>
+  <li>Improve attractive dark color generation, currently they’re a touch murky.</li>
+  <li>Improve the color dictionary
+    <ul>
+      <li>definition of hue values and attractive luminosity bounds</li>
+      <li>think about how to store hue aliases (e.g. fuschia) or subranges (e.g teal)</li>
+      <li>think about making a little point and click tool for defining your own luminosity bounds and customizing the color dictionary</li>
+    </ul>
+  </li>
+  <li>Think about how to return seeds.</li>
+  <li>Think about adding feature to return complementary &amp; contrasting colors, as well as color triads, tetrads etc. Other libraries might already do this better though.</li>
+  <li>Think about adding a scheme options which would return a dominant color, as well as secondary, tertiary color and primary and secondary text colors. This might be a bad idea.</li>
+  <li>Add a feature to return random colors close to a provided hex</li>
+</ol>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/MeherKhurana/solar-system-threejs/edit/gh-pages/src/app/vendor/randomcolor/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

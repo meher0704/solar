@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>stats.js | solar-system-threejs</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="stats.js" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Solar System modeled to scale with Three.js" />
+<meta property="og:description" content="The Solar System modeled to scale with Three.js" />
+<link rel="canonical" href="https://meherkhurana.github.io/solar-system-threejs/src/app/vendor/stats.js/" />
+<meta property="og:url" content="https://meherkhurana.github.io/solar-system-threejs/src/app/vendor/stats.js/" />
+<meta property="og:site_name" content="solar-system-threejs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="stats.js" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The Solar System modeled to scale with Three.js","headline":"stats.js","url":"https://meherkhurana.github.io/solar-system-threejs/src/app/vendor/stats.js/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/solar-system-threejs/assets/css/style.css?v=130ee4a9e32ec956430e2a40460efa2b2b5f226d">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/solar-system-threejs/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://meherkhurana.github.io/solar-system-threejs/">solar-system-threejs</a></h1>
+      
+
+      <h1 id="statsjs">stats.js</h1>
+
+<h4 id="javascript-performance-monitor">JavaScript Performance Monitor</h4>
+
+<p>This class provides a simple info box that will help you monitor your code performance.</p>
+
+<ul>
+  <li><strong>FPS</strong> Frames rendered in the last second. The higher the number the better.</li>
+  <li><strong>MS</strong> Milliseconds needed to render a frame. The lower the number the better.</li>
+  <li><strong>MB</strong> MBytes of allocated memory. (Run Chrome with <code class="language-plaintext highlighter-rouge">--enable-precise-memory-info</code>)</li>
+</ul>
+
+<h3 id="screenshots">Screenshots</h3>
+
+<p><img src="https://cdn.rawgit.com/mrdoob/stats.js/master/files/fps.png" alt="fps.png" />
+<img src="https://cdn.rawgit.com/mrdoob/stats.js/master/files/ms.png" alt="ms.png" />
+<img src="https://cdn.rawgit.com/mrdoob/stats.js/master/files/mb.png" alt="mb.png" /></p>
+
+<h3 id="usage">Usage</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">stats</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Stats</span><span class="p">();</span>
+<span class="nx">stats</span><span class="p">.</span><span class="nx">setMode</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span> <span class="c1">// 0: fps, 1: ms, 2: mb</span>
+
+<span class="c1">// align top-left</span>
+<span class="nx">stats</span><span class="p">.</span><span class="nx">domElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">position</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">absolute</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">stats</span><span class="p">.</span><span class="nx">domElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">0px</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">stats</span><span class="p">.</span><span class="nx">domElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">top</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">0px</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span> <span class="nx">stats</span><span class="p">.</span><span class="nx">domElement</span> <span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">update</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+	<span class="nx">stats</span><span class="p">.</span><span class="nx">begin</span><span class="p">();</span>
+
+	<span class="c1">// monitored code goes here</span>
+
+	<span class="nx">stats</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+
+	<span class="nx">requestAnimationFrame</span><span class="p">(</span> <span class="nx">update</span> <span class="p">);</span>
+
+<span class="p">};</span>
+
+<span class="nx">requestAnimationFrame</span><span class="p">(</span> <span class="nx">update</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="bookmarklet">Bookmarklet</h3>
+
+<p>You can add this code to any page using the following bookmarklet:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">javascript</span><span class="p">:(</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">script</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">script</span><span class="dl">'</span><span class="p">);</span><span class="nx">script</span><span class="p">.</span><span class="nx">onload</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="kd">var</span> <span class="nx">stats</span><span class="o">=</span><span class="k">new</span> <span class="nx">Stats</span><span class="p">();</span><span class="nx">stats</span><span class="p">.</span><span class="nx">domElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">cssText</span><span class="o">=</span><span class="dl">'</span><span class="s1">position:fixed;left:0;top:0;z-index:10000</span><span class="dl">'</span><span class="p">;</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">stats</span><span class="p">.</span><span class="nx">domElement</span><span class="p">);</span><span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="kd">function</span> <span class="nx">loop</span><span class="p">(){</span><span class="nx">stats</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span><span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">loop</span><span class="p">)});};</span><span class="nx">script</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span><span class="dl">'</span><span class="s1">//rawgit.com/mrdoob/stats.js/master/build/stats.min.js</span><span class="dl">'</span><span class="p">;</span><span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);})()</span>
+</code></pre></div></div>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/MeherKhurana/solar-system-threejs/edit/gh-pages/src/app/vendor/stats.js/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

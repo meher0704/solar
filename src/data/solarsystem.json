@@ -904,6 +904,162 @@
             }
         }
     ],
+    "dwarfPlanets": [
+        {
+            "id": 10,
+            "name": "Ceres",
+            "mass": "9.47 * 10^20",
+            "diameter": 952.4,
+            "density": 2.09,
+            "gravity": 0.28,
+            "rotationPeriod": 9.0,
+            "lengthOfDay": 9.0,
+            "distanceFromParent": 413690250,
+            "orbitalPeriod": 1681.6,
+            "orbitalVelocity": 17.878,
+            "orbitalInclination": 9.647,
+            "axialTilt": 4.0,
+            "surfaceTemps": {
+                "min": null,
+                "mean": 168,
+                "max": 235
+            },
+            "rings": false,
+            "satellites": [],
+            "_3d": {
+                "textures": {
+                    "base": "/src/assets/textures/ceres.png"
+                }
+            }
+        },
+        {
+            "id": 11,
+            "name": "Eris",
+            "mass": "1.66 * 10^22",
+            "diameter": 2326,
+            "density": 2.52,
+            "gravity": 0.82,
+            "rotationPeriod": 25.9,
+            "lengthOfDay": 25.9,
+            "distanceFromParent": 10166000000,
+            "orbitalPeriod": 203830,
+            "orbitalVelocity": 3.4338,
+            "orbitalInclination": 44.04,
+            "axialTilt": 0,
+            "meanTemperature": null,
+            "surfaceTemps": {
+                "min": 30,
+                "mean": 42.5,
+                "max": 55
+            },
+            "rings": false,
+            "satellites": [],
+            "_3d": {
+                "textures": {
+                    "base": "/src/assets/textures/pluto.jpg"
+                }
+            }
+        },
+        {
+            "id": 12,
+            "name": "Haumea",
+            "mass": "4.006 * 10^21",
+            "diameter": 1436,
+            "density": 2.6,
+            "gravity": 0.63,
+            "rotationPeriod": 3.9155,
+            "lengthOfDay": 3.9155,
+            "distanceFromParent": 6166212800,
+            "orbitalPeriod": 103774,
+            "orbitalVelocity": 4.53,
+            "orbitalInclination": 28.19,
+            "axialTilt": 0,
+            "meanTemperature": null,
+            "surfaceTemps": {
+                "min": 50,
+                "mean": 50,
+                "max": 50
+            },
+            "rings": false,
+            "satellites": [
+                {
+                    "id": 12.1,
+                    "name": "Namaka",
+                    "distanceFromParent": 25657,
+                    "orbitalPeriod": 18.278,
+                    "orbitalInclination": 113.013,
+                    "diameter": 170,
+                    "mass": "1.79 * 10^18",
+                    "gravity": 0.001,
+                    "surfaceTemps": {
+                        "min": 29,
+                        "max": 32,
+                        "mean": 35
+                    },
+                    "_3d": {
+                        "textures": {
+                            "base": "/src/assets/textures/earth/satellites/moon_1k.jpg",
+                            "topo": "/src/assets/textures/earth/satellites/moon_topo_1k.jpg"
+                        }
+                    }
+                },
+                {
+                    "id": 12.2,
+                    "name": "Hiʻiaka",
+                    "distanceFromParent": 49880,
+                    "orbitalPeriod": 49.462,
+                    "orbitalInclination": 126.356,
+                    "diameter": 310,
+                    "mass": "1.79 * 10^19",
+                    "gravity": 0.001,
+                    "surfaceTemps": {
+                        "min": 29,
+                        "max": 32,
+                        "mean": 35
+                    },
+                    "_3d": {
+                        "textures": {
+                            "base": "/src/assets/textures/earth/satellites/moon_1k.jpg",
+                            "topo": "/src/assets/textures/earth/satellites/moon_topo_1k.jpg"
+                        }
+                    }
+                }
+            ],
+            "_3d": {
+                "textures": {
+                    "base": "/src/assets/textures/pluto.jpg"
+                }
+            }
+        },
+        {
+            "id": 13,
+            "name": "Makemake",
+            "mass": "3 * 10^21",
+            "diameter": 1440,
+            "density": 2.6,
+            "gravity": null,
+            "rotationPeriod": 7.771,
+            "lengthOfDay": 7.771,
+            "distanceFromParent": 6838867000,
+            "orbitalPeriod": 112897,
+            "orbitalVelocity": 4.419,
+            "orbitalInclination": 29,
+            "axialTilt": null,
+            "meanTemperature": null,
+            "surfaceTemps": {
+                "min": 32,
+                "mean": 38,
+                "max": 44
+            },
+            "rings": false,
+            "satellites": [],
+            "_3d": {
+                "textures": {
+                    "base": "/src/assets/textures/pluto.jpg"
+                }
+            }
+        }
+    ],
     "asteroidBelt": {
         "count": 5000,
         "distanceFromParent": {
