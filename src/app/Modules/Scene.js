@@ -10,7 +10,7 @@ function(OrbitControls) {
       super();
 
       this._sceneElement = document.getElementById('solar-system');
-      this._camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.05, 5 * Math.pow(10, 13));
+      this._camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.05, 5 * Math.pow(10, 13));
       this._orbitControls = new OrbitControls(this._camera, this._sceneElement);
 
       // this.setCamera();

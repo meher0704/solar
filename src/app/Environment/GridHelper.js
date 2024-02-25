@@ -10,6 +10,8 @@ define(function() {
       var step = step || STEP;
 
       super(size, step);
+
+      // this.setAxis();
     }
 
     setAxis() {

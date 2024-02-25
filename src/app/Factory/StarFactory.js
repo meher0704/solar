@@ -11,7 +11,7 @@ function(Constants, Scene, RandomNumberGenerator, AjaxRequest) {
   class StarFactory {
     constructor(scene) {
       this._starsCentriod = new THREE.Object3D();
-      this._starsCount = 0;
+      this._starsCount = 8000;
       this._threeDistanceFromParent = 14959787070 * 40000 * Constants.orbitScale;
       this._randomNumberGenorator = new RandomNumberGenerator();
       this._texture = new THREE.TextureLoader().load('src/assets/textures/star.jpg');

@@ -33,4 +33,5 @@ require.config({
     urlArgs: 'bust=' + new Date().getTime()
 });
 
+// Initialize app
 require(['init']);

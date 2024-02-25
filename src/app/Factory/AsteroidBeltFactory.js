@@ -11,7 +11,7 @@ function(Scene, Constants, RandomNumberGenerator, Asteroid) {
   class AsteroidBeltFactory {
     constructor(scene, data) {
       this._scene = scene || null;
-      this._count = 0;
+      this._count = data.asteroidBelt.count || 1000;
       this._distanceFromParent = data.asteroidBelt.distanceFromParent.min;
       this._distanceFromParentMin = data.asteroidBelt.distanceFromParent.min;
       this._distanceFromParentMax = data.asteroidBelt.distanceFromParent.max;

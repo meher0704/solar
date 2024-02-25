@@ -22,9 +22,9 @@ function(
 ) {
   'use strict';
 
-  const ORBIT_COLOR_DEFAULT = '#000000';
-  const ORBIT_COLOR_HIGHLIGHT = '#FFFFFF';
-  const ORBIT_COLOR_ACTIVE = '#FF0000';
+  const ORBIT_COLOR_DEFAULT = '#424242';
+  const ORBIT_COLOR_HIGHLIGHT = '#197eaa';
+  const ORBIT_COLOR_ACTIVE = '#3beaf7';
 
   return Backbone.View.extend({
     events: {
@@ -43,6 +43,7 @@ function(
       this.moonDataModel = null;
       this.isTraveling = false;
       this.hasTraveled = false;
+
       this.currentTarget = options.currentTarget || this.sceneObjects[0];
       this.template = this.templateLoader.get('planets', 'src/app/Views/menu.twig').then((template)=> {
         this.template = template;
@@ -68,12 +69,8 @@ function(
     },
 
     onClick: function(e) {
-
-      console.log("Here")
       var id = Number.parseInt(e.currentTarget.dataset.id);
       var target = this.matchTarget(id);
-
-
 
       if (this.isCurrentTarget(target)) {
         e.stopImmediatePropagation();
@@ -81,38 +78,7 @@ function(
       }
 
       this.travelToObject(target);
-      
-      console.log("Here")
-
-      if (target.name === 'Mercury') {
-        // Trigger the overlay function when the condition is met
-        this.showOverlay();
-        setTimeout(delayedFunction, 10000);
-      } 
     },
-
-    showOverlay: function() {
-      // Code to overlay the page with another page
-      // For example, you can add a div element with a high z-index to cover the entire page and display another page within it
-      var overlayDiv = document.createElement('div');
-      overlayDiv.style.position = 'fixed';
-      overlayDiv.style.top = '0';
-      overlayDiv.style.left = '0';
-      overlayDiv.style.width = '100%';
-      overlayDiv.style.height = '100%';
-      overlayDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-      overlayDiv.style.zIndex = '9999';
-      overlayDiv.innerHTML = '<iframe id="overlayFrame" src="src/app/Controllers/m.html" style="width: 100%; height: 100%; border: none;"></iframe>'; // Change overlayPage.html to the desired overlay page URL
-      document.body.appendChild(overlayDiv);
-    
-      // Close the overlay after 10 seconds
-      setTimeout(function() {
-        var overlayFrame = document.getElementById('overlayFrame');
-        overlayFrame.parentNode.removeChild(overlayFrame); // Remove the overlay iframe
-        overlayDiv.parentNode.removeChild(overlayDiv); // Remove the overlay div
-      }, 10000); // 10 seconds in milliseconds
-    },
-    
 
     onMouseEnter: function(e) {
       var id = Number.parseInt(e.currentTarget.dataset.id);

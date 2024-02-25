@@ -10,7 +10,7 @@ function(Scene, Constants, RandomNumberGenerator) {
   class KuiperBeltFactory {
     constructor(scene, data) {
       this._scene = scene || null;
-      this._count = 0;
+      this._count = data.kuiperBelt.count || 1000;
       this._distanceFromParentMin = data.kuiperBelt.distanceFromParent.min;
       this._distanceFromParentMax = data.kuiperBelt.distanceFromParent.max;
       this._distanceFromParentMedian = this.calculateDistanceFromParentMedian();

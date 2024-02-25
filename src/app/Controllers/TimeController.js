@@ -9,7 +9,7 @@ function() {
   var year = today.getFullYear(today);
   var dayOfYear = Math.floor(today.getDOYwithTimeAsDecimal());
 
-  console.log('Day Of Year:', dayOfYear);
+  console.debug('Day Of Year:', dayOfYear);
 
   var TimeCtrl = {
     _year: year,

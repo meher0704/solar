@@ -65,6 +65,7 @@ function(
     var renderButton = $('#render-scene');
     var solarsystem = $('#solar-system');
     var progressPrompt = $('#loading-prompt');
+    var progressBar = $('#progress-bar');
 
     solarsystem.fadeOut();
 
